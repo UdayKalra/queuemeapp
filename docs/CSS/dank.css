@@ -217,7 +217,7 @@ a {
   width:100%;
 }
 .main-nav {
-  background: #050505;
+  background: #0055FF;
   height: 10.75vmin;
   z-index: 150;
   margin-bottom: -10.75vmin;
@@ -588,7 +588,7 @@ _______   ______     ______   .___________. _______ .______
 
 */
 #footer{
-	background-color: #202122;/*no fancy colours*/
+	background-color: #0055FF;/*no fancy colours*/
 	min-height: 15vmin;
 	z-index: 10;
 }
@@ -600,7 +600,7 @@ _______   ______     ______   .___________. _______ .______
 }
 #footer a{
 	text-decoration: underline;
-	color: #0645AD;
+	color: #0055FF;
 }
 #footer a:hover{
 	text-decoration: underline;

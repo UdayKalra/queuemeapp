@@ -253,7 +253,7 @@ a {
 }
 
 .bannerBtn:hover{
-	background-color: #23201F;
+	background-color: #0055FF;
 	transform: scale(1.1);
     color: #fff;
     opacity: 1;
@@ -396,7 +396,7 @@ _______  __      ____    ____    __  .__   __.   .___________. __________   ___ 
 	font-size: 2.5vmin;
 	text-align: center;
 	height: 10vmin;
-	background: #333132;
+	background: #0055FF;
 }
 #donate p{
 	font-size:1.4vw;
@@ -418,7 +418,7 @@ _______  __      ____    ____    __  .__   __.   .___________. __________   ___ 
 	width: 75%;
 	height: auto;
 	border: 5px solid #666666;
-	background-color: #202122;
+	background-color: #0055FF;
 	color:#fff;
 	padding:1vmin;
 	margin-bottom: 10px;
@@ -453,7 +453,7 @@ _______  __      ____    ____    __  .__   __.   .___________. __________   ___ 
 	font-size: 2.5vmin;
 	height: 10vmin;
 	text-align: center;
-	background: #333132;
+	background: #0055FF;
 }
 #team .members {
 }
@@ -484,7 +484,7 @@ _______  __      ____    ____    __  .__   __.   .___________. __________   ___ 
 	width: auto;
 }
 #team .profile:hover{
-	background-color: #333132;
+	background-color: #0055FF;
 	color: #fff;
 	transform: scale(1.1);
 	border: 5px solid #000;
@@ -507,7 +507,7 @@ _______  __      ____    ____    __  .__   __.   .___________. __________   ___ 
 #special .banner{
 	font-size: 2.5vmin;
 	text-align: center;
-	background: #333132;
+	background: #0055FF;
 }
 #special .banner h1{
 	font-family: 'RoboTechGP', Open Sans, Arial;
@@ -573,7 +573,7 @@ _______  __      ____    ____    __  .__   __.   .___________. __________   ___ 
 	font-size: 2.5vmin;
 	height: 10vmin;
 	text-align: center;
-	background: #333132;
+	background: #0055FF;
 }
 #contact p{
 	font-size: 1.85vmin;
@@ -604,7 +604,7 @@ _______   ______     ______   .___________. _______ .______
 }
 #footer a:hover{
 	text-decoration: underline;
-	color: #7700ff;
+	color: #0055FF;
 }
 #footer img{
 	position:inherit;

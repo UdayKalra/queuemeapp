@@ -1,0 +1,624 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+	font-family: 'RoboTechGP';
+	src: url('../Fonts/ROBOTECH_GP.ttf') format('truetype');
+	src: url('../Fonts/ROBOTECH_GP.eot') format ('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@keyframes bgcolor {
+	0% { background-color: #000 }
+	25% { background-color: #101010 }
+	50% { background-color: #202020 }
+	75% {background-color: #303030 }
+	100% { background-color: #202020 }
+}
+@keyframes rgb {
+	0% {background-color:#FF0000;}
+	11% {background-color:#E2571E;}
+	22% {background-color:#FF7F00;}
+	33% {background-color:#FFFF00;}
+	44% {background-color:#00FF00;}
+	55% {background-color:#96bf33;}
+	66% {background-color:#0000FF;}
+	77% {background-color:#4B0082;}
+	88% {background-color:#8B00FF;}
+	99% {background-color:#ffffff;}
+}
+@keyframes rgbTXT {
+    0% {color:#FF0000;}
+	11% {color:#E2571E;}
+	22% {color:#FF7F00;}
+	33% {color:#FFFF00;}
+	44% {color:#00FF00;}
+	55% {color:#96bf33;}
+	66% {color:#0000FF;}
+	77% {color:#4B0082;}
+	88% {color:#8B00FF;}
+	99% {color:#ffffff;}
+}
+
+.image {
+	border-radius: 6px;
+	border: 0;
+	display: inline-block;
+	position: relative;
+	border:5px solid #000;
+}
+
+.image img {
+	border-radius: 6px;
+	display: block;
+}
+
+.image.left {
+	float: left;
+	padding: 0 1.5em 1em 0;
+	top: 0.25em;
+}
+
+.image.right {
+	float: right;
+	padding: 0 0 1em 1.5em;
+	top: 0.25em;
+}
+
+.image.fit {
+	display: block;
+	margin: 0 0 2em 0;
+	width: 100%;
+}
+
+.image.fit img {
+	display: block;
+	width: 100%;
+}
+
+body{
+	font-family:  'RoboTechGP', Open Sans, Arial;
+	overflow-x: hidden;
+	-webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 5s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+a {
+	text-decoration : none;
+	color : inherit;
+}
+.intro {
+	background-size: normal;
+	background-attachment: fixed;
+}
+.background{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index: -100;
+	transition: opacity 3s;
+}
+#rainbowEgg {
+	font-family:  'RoboTechGP', Open Sans, Arial;
+	-webkit-animation: rgb 20s infinite;
+    animation: rgb 20s infinite;
+	opacity:0;
+}
+.rainbowEggTXT {
+	-webkit-animation: rgbTXT 0s infinite;
+    animation: rgbTXT 0s infinite;
+}
+
+.content {
+	z-index: 2;
+	/*height: 1500px;/*DELETE WHEN WANT TO MAKE SIZE ADAPTIVE*/
+	padding-top: 210px;
+	background-color: #fff;
+}
+.content h2, .content p {
+	width: 60%;
+	margin: 0 auto;
+}
+.spacer {
+	height: 100vh;
+}
+.textbox{
+	width: 275px;
+	font-size: 16px;
+	font-weight: 100;
+	padding: 10px;
+}
+
+/*
+        _______.  ______ .______        ______    __       __         .______    __    __  .___________.___________.  ______   .__   __.
+      /       | /      ||   _  \      /  __  \  |  |     |  |        |   _  \  |  |  |  | |           |           | /  __  \  |  \ |  |
+     |   (----`|  ,----'|  |_)  |    |  |  |  | |  |     |  |        |  |_)  | |  |  |  | `---|  |----`---|  |----`|  |  |  | |   \|  |
+     \   \    |  |     |      /     |  |  |  | |  |     |  |        |   _  <  |  |  |  |     |  |        |  |     |  |  |  | |  . `  |
+.----)   |   |  `----.|  |\  \----.|  `--'  | |  `----.|  `----.   |  |_)  | |  `--'  |     |  |        |  |     |  `--'  | |  |\   |
+|_______/     \______|| _| `._____| \______/  |_______||_______|   |______/   \______/      |__|        |__|      \______/  |__| \__|
+
+*/
+.scroller a {
+	position: absolute;
+	bottom: 1vw;
+	left: 46.5vw;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #fff;
+	font-type: 'RoboTechGP', sans-serif;
+	font-size: 2vw;
+	letter-spacing: .1em;
+	text-decoration: none;
+	transition-duration: 1.5s;
+}
+.scroller a:hover {
+	color:red;
+}
+/*arrows and their animation*/
+#arrows a {
+	padding-top: 80px;
+}
+#arrows a span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1vw;
+	height: 1vw;
+	margin-left: -0.8vw;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb07 2s infinite;
+	animation: sdb07 2s infinite;
+	opacity: 0;
+	box-sizing: border-box;
+}
+#arrows a span:nth-of-type(1) {
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+#arrows a span:nth-of-type(2) {
+	top: 1vw;
+	-webkit-animation-delay: .15s;
+	animation-delay: .15s;
+}
+#arrows a span:nth-of-type(3) {
+	top: 2vw;
+	-webkit-animation-delay: .3s;
+	animation-delay: .3s;
+}
+@-webkit-keyframes sdb07 {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes sdb07 {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+/*
+.___________.  ______   .______      __    __   _______     ___       _______   _______ .______
+|           | /  __  \  |   _  \    |  |  |  | |   ____|   /   \     |       \ |   ____||   _  \
+`---|  |----`|  |  |  | |  |_)  |   |  |__|  | |  |__     /  ^  \    |  .--.  ||  |__   |  |_)  |
+    |  |     |  |  |  | |   ___/    |   __   | |   __|   /  /_\  \   |  |  |  ||   __|  |      /
+    |  |     |  `--'  | |  |        |  |  |  | |  |____ /  _____  \  |  '--'  ||  |____ |  |\  \.
+    |__|      \______/  | _|        |__|  |__| |_______/__/     \__\ |_______/ |_______|| _| `._|
+
+*/
+.main-nav,
+.main {
+  position: relative;
+  width:100%;
+}
+.main-nav {
+  background: #050505;
+  height: 10.75vmin;
+  z-index: 150;
+  margin-bottom: -10.75vmin;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  opacity: 0.9;
+  font-size: 2vmin;
+}
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.main-nav h1{
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	color: #fff;
+	letter-spacing: 0.5vmin;
+	text-align: center;
+	font-size: 3vmin;
+}
+.bannerBtn{
+	border-radius: 4px;
+	border: 5px;
+	padding: 1.5vmin;
+	font-family: 'RoboTechGP',Open Sans, Arial;
+	letter-spacing: 0.5vmin;
+	color: #fff;
+	margin-top: 15px;
+	text-align: center;
+	outline: 5px;
+	transition-duration: 0.8s;
+    cursor: pointer;
+   	font-size: 3vmin;
+}
+
+.bannerBtn:hover{
+	background-color: #23201F;
+	transform: scale(1.1);
+    color: #fff;
+    opacity: 1;
+}
+
+.bannerBtn:active{opacity: 0.5;}
+/*
+_______  __      ____    ____    __  .__   __.   .___________. __________   ___ .___________.
+|   ____||  |     \   \  /   /   |  | |  \ |  |   |           ||   ____\  \ /  / |           |
+|  |__   |  |      \   \/   /    |  | |   \|  |   `---|  |----`|  |__   \  V  /  `---|  |----`
+|   __|  |  |       \_    _/     |  | |  . `  |       |  |     |   __|   >   <       |  |
+|  |     |  `----.    |  |       |  | |  |\   |       |  |     |  |____ /  .  \      |  |
+|__|     |_______|    |__|       |__| |__| \__|       |__|     |_______/__/ \__\     |__|
+
+*/
+/*WELCOME*/
+.welcome{
+	list-style: none;
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+.welcome li {
+	display: inline-block;
+	margin-right: 1vw;
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-size: 10vw;
+	color: #fff;
+	opacity: 1;
+	transition: all 2.5s ease;
+}
+.welcome li:last-child {margin-right: 0;}
+.welcome.hidden li {opacity: 0;}
+
+.welcome.hidden li:nth-child(1){transform: translateX(-200px) translateY(-200px);}
+.welcome.hidden li:nth-child(2){transform: translateX(20px) translateY(100px);}
+.welcome.hidden li:nth-child(3){transform: translateX(-150px) translateY(80px);}
+.welcome.hidden li:nth-child(4){transform: translateX(10px) translateY(-200px);}
+.welcome.hidden li:nth-child(5){transform: translateX(-300px) translateY(200px);}
+.welcome.hidden li:nth-child(6){transform: translateX(30px) translateY(200px);}
+.welcome.hidden li:nth-child(7){transform: translateX(100px) translateY(50px);}
+/*TO*/
+.to{
+	list-style: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+.to li {
+	display: inline-block;
+	margin-right: 1vw;
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-size: 5vw;
+	color: #fff;
+	opacity: 1;
+	transition: all 2.5s ease;
+}
+.to li:last-child {margin-right: 0;}
+.to.hidden2 li {opacity: 0;}
+
+.to.hidden2 li:nth-child(1){transform: translateX(-200px) translateY(130px);}
+.to.hidden2 li:nth-child(2){transform: translateX(170px) translateY(-200px);}
+
+/*team number*/
+.teamNumber{
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	list-style: none;
+	position: absolute;
+	left: 51%;
+	top: 65%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.teamNumber li {
+	display: inline-block;
+	margin-right: 0.5vw;
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-weight: 200;
+	font-size: 8vw;
+	color: #fff;
+	opacity: 1;
+	transition: all 2.5s ease;
+}
+.teamNumber li:last-child {display:none;margin-right: 0;}
+.teamNumber.hidden3 li {opacity: 0;}
+.teamNumber.hidden3 li:nth-child(1){transform: translateX(300px) translateY(-250px);}
+.teamNumber.hidden3 li:nth-child(2){transform: translateX(100px) translateY(241px);}
+.teamNumber.hidden3 li:nth-child(3){transform: translateX(-230px) translateY(150px);}
+.teamNumber.hidden3 li:nth-child(4){transform: translateX(-170px) translateY(-123px);}
+.teamNumber.hidden3 li:nth-child(5){transform: translateX(-310px) translateY(166px);}
+.teamNumber.hidden3 li:nth-child(6){transform: translateX(-120px) translateY(-63px);}
+.teamNumber.hidden3 li:nth-child(7){transform: translateX(400px) translateY(80px);}
+.teamNumber.hidden3 li:nth-child(8){transform: translateX(30px) translateY(-180px);}
+.teamNumber.hidden3 li:nth-child(9){transform: translateX(-60px) translateY(230px);}
+.teamNumber.hidden3 li:nth-child(10){transform: translateX(165px) translateY(180px);}
+.teamNumber li:hover {
+	color:red;
+	transition-duration: 0.3s;
+	margin: 0;
+}
+.teamNumber li:nth-child(2):active {
+	color:blue;
+	transition-duration: 0.3s;
+	margin-right: 0;
+}
+
+/*
+.______        ______   .______     ______   .___________.   .______      ___       _______  _______
+|   _  \      /  __  \  |   _  \   /  __  \  |           |   |   _  \    /   \     /  _____||   ____|
+|  |_)  |    |  |  |  | |  |_)  | |  |  |  | `---|  |----`   |  |_)  |  /  ^  \   |  |  __  |  |__
+|      /     |  |  |  | |   _  <  |  |  |  |     |  |        |   ___/  /  /_\  \  |  | |_ | |   __|
+|  |\  \----.|  `--'  | |  |_)  | |  `--'  |     |  |        |  |     /  _____  \ |  |__| | |  |____
+| _| `._____| \______/  |______/   \______/      |__|        | _|    /__/     \__\ \______| |_______|
+
+*/
+#donate{
+	font-family: Open Sans, Arial;
+	font-size: 2vmin;
+	text-align: center;
+}
+#donate h1{
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-size: 3em;
+	color: #fff;
+	letter-spacing: 0.5vmin;
+}
+#donate .banner{
+	font-size: 2.5vmin;
+	text-align: center;
+	height: 10vmin;
+	background: #333132;
+}
+#donate p{
+	font-size:1.4vw;
+}#donate h2{
+	font-size:2vw;
+}
+#donate table{
+	width:35vw;
+}
+#donate table td{
+	max-width: 80vmin;
+}
+.button{
+	margin: 0 auto;
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-size: 5vmin;
+	font-spacing:1vmin;
+	text-align: center;
+	width: 75%;
+	height: auto;
+	border: 5px solid #666666;
+	background-color: #202122;
+	color:#fff;
+	padding:1vmin;
+	margin-bottom: 10px;
+	padding-top:0vmin;
+	transition-duration: 0.3s
+}
+ .button:hover{
+	transform: scale(1.2,1.2);
+}
+
+/*
+     ___      .______     ______    __    __  .___________.   .______      ___       _______  _______
+    /   \     |   _  \   /  __  \  |  |  |  | |           |   |   _  \    /   \     /  _____||   ____|
+   /  ^  \    |  |_)  | |  |  |  | |  |  |  | `---|  |----`   |  |_)  |  /  ^  \   |  |  __  |  |__
+  /  /_\  \   |   _  <  |  |  |  | |  |  |  |     |  |        |   ___/  /  /_\  \  |  | |_ | |   __|
+ /  _____  \  |  |_)  | |  `--'  | |  `--'  |     |  |        |  |     /  _____  \ |  |__| | |  |____
+/__/     \__\ |______/   \______/   \______/      |__|        | _|    /__/     \__\ \______| |_______|
+
+*/
+#team{
+
+	font-family: Open Sans, Arial;
+	font-size: 1.4em;
+}
+#team h1{
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-size: 3em;
+	color: #fff;
+	letter-spacing: 0.5vmin;
+}
+#team .banner{
+	font-size: 2.5vmin;
+	height: 10vmin;
+	text-align: center;
+	background: #333132;
+}
+#team .members {
+}
+#team .profile {
+	vertical-align: top;
+	display: inline-block;
+	border: 5px solid #333132;
+	width: 15em;
+	height: 15em;
+	margin: 5px;
+	transition-duration: 0.4s;
+}
+#team .profile h3 {
+	font-weight: bold;
+	font-style: italic;
+	text-align:center;
+	font-size:1em;
+}
+#team .profile img{
+	width:9em;
+	height:9em;
+	border-radius: 50%;
+}
+#team .profile p{
+	margin-right:0.1vw;
+	margin-left:0.1vw;
+	font-size: 0.7em;
+	width: auto;
+}
+#team .profile:hover{
+	background-color: #333132;
+	color: #fff;
+	transform: scale(1.1);
+	border: 5px solid #000;
+}
+
+/*
+         _______..______    _______   ______  __       ___       __         .______      ___       _______  _______
+       /       ||   _  \  |   ____| /      ||  |     /   \     |  |        |   _  \    /   \     /  _____||   ____|
+      |   (----`|  |_)  | |  |__   |  ,----'|  |    /  ^  \    |  |        |  |_)  |  /  ^  \   |  |  __  |  |__
+      \   \    |   ___/  |   __|  |  |     |  |   /  /_\  \   |  |        |   ___/  /  /_\  \  |  | |_ | |   __|
+ .----)   |   |  |      |  |____ |  `----.|  |  /  _____  \  |  `----.   |  |     /  _____  \ |  |__| | |  |____
+|_______/    | _|      |_______| \______||__| /__/     \__\ |_______|   | _|    /__/     \__\ \______| |_______|
+
+*/
+#special{
+	font-family: Open Sans, Arial;
+	font-size: 1.4em;
+	height:33em;
+}
+#special .banner{
+	font-size: 2.5vmin;
+	text-align: center;
+	background: #333132;
+}
+#special .banner h1{
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-size: 2em;
+	color: #fff;
+	letter-spacing: 0.5vmin;
+	text-align: center;
+}
+#special p{
+	font-size: 1.85vmin;
+}
+#special .block {
+	vertical-align: top;
+	display: inline-block;
+	transition-duration: 0.4s;
+}
+#special .big {
+	margin-right: 1vmin;
+	max-width: 35em;
+	height: auto;
+}
+#special .smol {
+	width: 15vw;
+	height: auto;
+}
+#special .block h3 {
+	font-family:  'RoboTechGP', Open Sans, Arial;
+	font-style: italic;
+	text-align:center;
+	font-size:3em;
+}
+#special .block img{
+	width: inherit;
+	height: auto;
+	margin-bottom:2vw;
+}
+#special .block p{
+	margin:0.4vw;
+	font-size: 1.3em;
+	width: auto;
+}
+
+/*
+   ______   ______   .__   __. .___________.    ___       ______ .___________.   .______      ___       _______  _______
+ /      | /  __  \  |  \ |  | |           |   /   \     /      ||           |   |   _  \    /   \     /  _____||   ____|
+|  ,----'|  |  |  | |   \|  | `---|  |----`  /  ^  \   |  ,----'`---|  |----`   |  |_)  |  /  ^  \   |  |  __  |  |__
+|  |     |  |  |  | |  . `  |     |  |      /  /_\  \  |  |         |  |        |   ___/  /  /_\  \  |  | |_ | |   __|
+|  `----.|  `--'  | |  |\   |     |  |     /  _____  \ |  `----.    |  |        |  |     /  _____  \ |  |__| | |  |____
+ \______| \______/  |__| \__|     |__|    /__/     \__\ \______|    |__|        | _|    /__/     \__\ \______| |_______|
+
+*/
+#contact{
+	font-family: Open Sans, Arial;
+	font-size: 1.4em;
+}
+#contact h1{
+	font-family: 'RoboTechGP', Open Sans, Arial;
+	font-size: 3em;
+	color: #fff;
+	letter-spacing: 0.5vmin;
+}
+#contact .banner{
+	font-size: 2.5vmin;
+	height: 10vmin;
+	text-align: center;
+	background: #333132;
+}
+#contact p{
+	font-size: 1.85vmin;
+}
+/*
+_______   ______     ______   .___________. _______ .______
+|   ____| /  __  \   /  __  \  |           ||   ____||   _  \
+|  |__   |  |  |  | |  |  |  | `---|  |----`|  |__   |  |_)  |
+|   __|  |  |  |  | |  |  |  |     |  |     |   __|  |      /
+|  |     |  `--'  | |  `--'  |     |  |     |  |____ |  |\  \----.
+|__|      \______/   \______/      |__|     |_______|| _| `._____|
+
+*/
+#footer{
+	background-color: #202122;/*no fancy colours*/
+	min-height: 15vmin;
+	z-index: 10;
+}
+#footer p{
+	font-family: Sans-serif, Arial;
+	color: white;
+	font-size:2vmin;
+	padding:0.5vmin;
+}
+#footer a{
+	text-decoration: underline;
+	color: #0645AD;
+}
+#footer a:hover{
+	text-decoration: underline;
+	color: #7700ff;
+}
+#footer img{
+	position:inherit;
+	height:6vmin;
+	width: 6vmin;
+	transition-duration: 0.2s;
+}
+#footer img:hover{
+	transform: scale(1.5,1.5);
+}
+#footer #header {
+	font-size: 3vmin;
+	text-align: center;
+	padding-bottom: 0.2vmin;
+}
+
+/*http://patorjk.com/software/taag/#p=display&f=Star%20Wars&t=text*/

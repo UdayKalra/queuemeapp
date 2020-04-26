@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>QueueMe!</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" type="image/png" href="Images/nestIcon.png">
+		<link rel="stylesheet" href="CSS/dank.css">
+		<link rel="stylesheet" href="CSS/animate.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript">
+		    function fadeIn(obj){ $(obj).fadeIn(5000); } /*For fading in the background image*/
+			$(function() { setTimeout(function(){ $('.welcome').removeClass('hidden');   }, 200); }),/*waits 1 second, then starts*/
+			$(function() { setTimeout(function(){ $('.to').removeClass('hidden2'); }, 800); }),/*waits 2 seconds then starts*/
+			$(function() { setTimeout(function(){ $('.teamNumber').removeClass('hidden3'); }, 1800); })/*waits 4 seconds, then starts*/
+		</script>
+		<script src="three.min.js"></script>
+		<script src="webgl_detector.js"></script>
+		<script src="Projector.js"></script>
+		<script src="CanvasRenderer.js"></script>
+		<script src="OrbitControls.js"></script>
+	</head>
+	<body>
+		<div class = "background" id = "rainbowEgg"></div>
+		<div class="intro">
+			<!--MAKE PARRALAX IMAGE SCROLLING AT SLOWER SPEED THAN EVERYTHING ELSE-->
+			
+		</div>
+			<section id="arrows" class="scroller">
+				<a href="#donate"><span></span><span></span><span></span>Scroll</a>
+			</section>
+		<div class="spacer"></div><!--used for the IMPORTANT buffer space between background intro image and content-->
+		  <!--top header for sticking to the top-->
+		  <nav class="main-nav" >
+		  	<h1 class="rainbowEggTXT">QueueMe!</h1>
+		  <center>
+	  		<table style = "width: 100%;">
+	  			<td class = "bannerBtn" id = "ROBOTBtn">
+	  				<a href = "#donate">
+	  					<h3 class="rainbowEggTXT">The Problem</h3>
+	  				</a>
+	  			</td>
+	  			<td class = "bannerBtn" id = "SPECIALBtn">
+	  				<a href = "#special">
+	  					<h3 class="rainbowEggTXT">Our Solution</h3>
+	  				</a>
+	  			</td>
+				<td class = "bannerBtn" id = "TEAMBtn">
+					<a href = "#team">
+						<h3 class="rainbowEggTXT" >Our Team</h3>
+					</a>
+				</td>
+	  			<td class = "bannerBtn" id = "CONTACTBtn">
+	  				<a href = "#contact">
+	  					<h3 class="rainbowEggTXT">Contact Us</h3>
+	  				</a>
+	  			</td>
+	  		</table>
+			<!--<a href="https://goo.gl/forms/lN3ugy5HyYL6doQa2" target="_blank">
+				<div class = "button rainbowEggTXT">
+					Apply Now To Spectre Robotics
+				</div>
+			</a>-->
+
+	    </center>
+	  </nav>
+	  <div id = "donate" name = "donate" class="content">
+	  	<div class = "banner"><center><h1 class="rainbowEggTXT">the problem:</h1></div>
+	  	<br><br>
+	  	<h2>Protecting against the Ronas</h2>
+	  	<center><table><tr><td><table><tr>
+	  				<td>
+	  					<p> Ya'll seriously gonna stand in a line when them ronas abound?! </p>
+	  				</td>
+	  			</table></td><td><table><tr>
+	  				<td>
+	  				</td>
+	  			</table></td></table>
+	  	</center>
+	  </div>
+	<div id = "special" name = "special" class="content">
+		<div class = "banner">
+			<h1 class="rainbowEggTXT">Our Solution</h1>
+				<table style = "width: 100vw; padding-bottom: 0em;">
+		  			<td class = "bannerBtn" id = "overall_btn">
+		  				<h3 class="rainbowEggTXT">Another goddamn app.</h3>
+		  			</td>
+	  			</table>
+			</div>
+				<br><br>
+				<div id = "pages" style = "position:relative;">
+					<div id = "overall" class = "animated fadeIn" style = "position: absolute; left: 0; right: 0; margin: auto">
+						<center>
+							<div class="block big">
+								<h3 class = "rainbowEggTXT">QueueMe!</h3>
+								<p>
+									Hello! We are QueueMe. The goal of this project is to create an app that will allow check you into a digital store line. This way entry to stores will be optimized to reduce the catching of ronas.
+								</p>
+
+							</div>
+							<div class="block big" style = "width:25vw">
+								<script>setTimeout(function(){document.getElementById('simVid').play();},0);</script>
+							</div>
+						</center>
+					</div>
+				</div>
+			</div>
+		<div id = "team"  name = "team"class="content">
+			<div class = "banner" >
+				<h1 class="rainbowEggTXT">About our team </h1>
+			</div>
+			<br><br>
+			<center>
+				<div class="members">
+					<div class="profile">
+						<h3>Uday Kalra</h3>
+						<img src="Images\ppl\uddyyyy.png" >
+						<p>Hmu if you wanna get serenaded by the sandman.</p>
+					</div>
+					<div class="profile">
+						<h3>Gustavo Silvera</h3>
+						<img src="Images\ppl\goos.jpg" >
+						<p>Suuper genius. Incredibly hot.</p>
+					</div>
+					<div class="profile">
+						<h3>Noah Boursier</h3>
+						<img src="Images\ppl\noa.jpg" >
+						<p>Lost mechanical engineer, please help. </p>
+					</div>
+					<div class="profile">
+						<h3>Adrian Liu</h3>
+						<img src="Images\ppl\DoYouLoveMeNowFace.jpg">
+						<p>Cloud main. Also hot.</p>
+					</div>
+				</div>
+			</center>
+		</div>
+		<div id = "contact" name = "contact" class="content">
+			<center>
+				<div class = "banner">
+					<h1 class="rainbowEggTXT">Drop Us A Line</h1>
+				</div>
+<br><br>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8xtyaK5cwXJGD7QK6fiargVvmq6O_uChXULEYFemayTmM1A/viewform?embedded=true" width="700" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36235.91373506627!2d-121.89753749303215!3d37.698213780088416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fe65cd6892231%3A0x3b327c848ef64057!2sDublin%2C+CA+94568!5e0!3m2!1sen!2sus!4v1496553141932" width="50%" height="900px" frameborder="5px" style="border:5px" allowfullscreen></iframe>		</div>
+			</center>
+		</div>
+
+			<script>
+			/*global $*/
+				$('#overall_btn').on('click', function(){
+					$('#raspi').removeClass('fadeIn');
+					$('#chassis').removeClass('fadeIn');
+					$('#camera').removeClass('fadeIn');
+					$('#raspi').addClass('fadeOut');
+					$('#chassis').addClass('fadeOut');
+					$('#camera').addClass('fadeOut');
+					$('#overall').removeClass('fadeOut');
+					$('#overall').addClass('fadeIn');
+				});
+				$('#raspi_btn').on('click', function(){
+					$('#overall').removeClass('fadeIn');
+					$('#chassis').removeClass('fadeIn');
+					$('#camera').removeClass('fadeIn');
+					$('#overall').addClass('fadeOut');
+					$('#chassis').addClass('fadeOut');
+					$('#camera').addClass('fadeOut');
+					$('#raspi').removeClass('fadeOut');
+					$('#raspi').addClass('fadeIn');
+				});
+				$('#chassis_btn').on('click', function(){
+					$('#overall').removeClass('fadeIn');
+					$('#raspi').removeClass('fadeIn');
+					$('#camera').removeClass('fadeIn');
+					$('#overall').addClass('fadeOut');
+					$('#raspi').addClass('fadeOut');
+					$('#camera').addClass('fadeOut');
+					$('#chassis').removeClass('fadeOut');
+					$('#chassis').addClass('fadeIn');
+				});
+				$('#camera_btn').on('click', function(){
+					$('#overall').removeClass('fadeIn');
+					$('#raspi').removeClass('fadeIn');
+					$('#chassis').removeClass('fadeIn');
+					$('#overall').addClass('fadeOut');
+					$('#raspi').addClass('fadeOut');
+					$('#chassis').addClass('fadeOut');
+					$('#camera').removeClass('fadeOut');
+					$('#camera').addClass('fadeIn');
+				});
+			var $root = $('html, body');
+			$('a').click(function() {
+			    $root.animate({
+			        scrollTop: $( $.attr(this, 'href') ).offset().top
+			    }, 500);
+			    return false;
+			});
+			/*for scrolling yet fixed header*/
+			var  mn = $(".main-nav");
+			    //mns = "main-nav-scrolled";
+			    //hdr = $('header').height();
+			$(window).scroll(function() {
+			  if( $(this).scrollTop() > window.innerHeight) {
+			    mn.addClass("main-nav-scrolled");
+			  } else {
+			    mn.removeClass("main-nav-scrolled");
+			  }
+			  console.log($(this).scrollTop());
+			  console.log(window.innerHeight );
+			});
+		</script>
+
+		<ul class="welcome hidden" style = "font-size: 0.8vmin;">
+			<!--Welcome-->
+			<li>W</li> <li>E</li> <li>L</li> <li>C</li> <li>O</li> <li>M</li> <li>E</li>
+		</ul>
+		<ul class="to hidden2" style = "font-size: 0.55vmin;">
+			<!--To-->
+			<li>T</li> <li>O</li>
+		</ul>
+		<ul class="teamNumber hidden3" style = "font-size: 0.3vmin;">
+			<!--139A-->
+			<li>Q</li> <li> <div id = "eggnogg" onclick="easter()"> u </div> </li> <li>e</li> <li>u</li> <li>e</li> <li>M</li> <li>e</li> <li>!</li> <!-- <li>A</li>-->
+		</ul>
+		<script>
+			function easter() {
+				document.getElementById("rainbowEgg").setAttribute("style","opacity: 1;");
+				var elements = document.getElementsByClassName("rainbowEggTXT");
+				for(var i=0; i<elements.length; i++) {
+				    elements[i].setAttribute("style", "-webkit-animation: rgbTXT 20s infinite;");
+					elements[i].setAttribute("style", "animation: rgbTXT 20s infinite;");
+				}
+			}
+		</script>
+		<!-- Footer -->
+			<footer id="footer">
+				<center>
+					<table>
+						<br>
+						<td style = "padding-right: 14vmin;">
+							<p id = "header" class = "rainbowEggTXT">
+								Copyright © 2020 AGUN<br>
+								Location: Dublin, CA<br>
+							</p>
+							<table>
+								<tr>
+								<td>
+									<table>
+										<tr>
+										<td>
+											<p>
+												Email Us:<br>
+
+											</p>
+										</td>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+										<td>
+											<p>
+												<a href="mailto:nobody">AGUN.GROUP@gmail.com</a><br>
+												<!--<a href="mailto:grs5382@gmail.com">grs5382@gmail.com</a><br>
+												<a href="mailto:wesleywong.wong@gmail.com">wesleywong.wong@gmail.com</a><br>
+												<a href="mailto:harshaj01@gmail.com">harshaj01@gmail.com</a><br>
+												<a href="mailto:adrianliu1231@gmail.com">adrianliu1231@gmail.com</a><br>-->
+											</p>
+										</td>
+									</table>
+								</td>
+							</table>
+						</td>
+						<td>
+							<p id = "header" class = "rainbowEggTXT">
+								Follow Us Online
+							</p>
+							<table>
+								<tr>
+								<td>
+									<table>
+										<tr>
+										<td>
+											<p>
+												<a href="" target="_blank"><img src="Images/discord.png"></a><br>
+												<a href="" target="_blank"><img src="Images/github.png"></a><br>
+											</p>
+										</td>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+										<td>
+											<p>
+												<a href="" target="_blank"><img src="Images/facebook.png"></a><br>
+												<a href="" target="_blank"><img src="Images/twitter.png"></a><br>
+											</p>
+										</td>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+										<td>
+											<p>
+												<a href="" target="_blank"><img src="Images/youtubber.png"></a><br>
+												<a href="" target="_blank"><img src="Images/instagram.png"></a><br>
+											</p>
+										</td>
+									</table>
+								</td>
+							</table>
+						</td>
+					</table>
+				</center>
+			</footer>
+
+	</body>
+</html>

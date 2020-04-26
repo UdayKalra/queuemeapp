@@ -10,11 +10,11 @@
 	font-style: normal;
 }
 @keyframes bgcolor {
-	0% { background-color: #000 }
-	25% { background-color: #101010 }
-	50% { background-color: #202020 }
-	75% {background-color: #303030 }
-	100% { background-color: #202020 }
+	0% { background-color: #0055FF }
+	25% { background-color: #0055FF }
+	50% { background-color: #0055FF }
+	75% {background-color: #0055FF }
+	100% { background-color: #0055FF }
 }
 @keyframes rgb {
 	0% {background-color:#FF0000;}
